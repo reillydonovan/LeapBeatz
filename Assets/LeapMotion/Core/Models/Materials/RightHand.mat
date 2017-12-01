@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: RightHand
-  m_Shader: {fileID: 4800000, guid: 33012a61116292646a9ff9ad9f28bd0e, type: 3}
+  m_Shader: {fileID: 4800000, guid: 874f4d9da4c976641b7758937b868fe3, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0

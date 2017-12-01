@@ -8,16 +8,19 @@ namespace Skinner
     public class SkinnerTrail : MonoBehaviour
     {
         #region External object/asset references
-
+        
         /// Reference to an effect source.
         public SkinnerSource source {
             get { return _source; }
             set { _source = value; _reconfigured = true; }
         }
+        
+
 
         [SerializeField]
         [Tooltip("Reference to an effect source.")]
         SkinnerSource _source;
+        SkinnerSource _source1;
 
         /// Reference to a template object used for rendering trail lines.
         public SkinnerTrailTemplate template {
@@ -88,6 +91,7 @@ namespace Skinner
         [SerializeField]
         [Tooltip("The maximum width of lines.")]
         float _maxWidth = 0.05f;
+        bool test = false;
 
         #endregion
 
@@ -98,6 +102,8 @@ namespace Skinner
             get { return _randomSeed; }
             set { _randomSeed = value; _reconfigured = true; }
         }
+        
+
 
         [SerializeField]
         [Tooltip("Determines the random number sequence used for the effect.")]
@@ -231,6 +237,7 @@ namespace Skinner
 
         void LateUpdate()
         {
+          
             // Do nothing if the source is not ready.
             if (_source == null || !_source.isReady) return;
 
