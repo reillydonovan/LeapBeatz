@@ -26,8 +26,8 @@ Material:
     - _AreaThreshold: 0.0172
     - _AttackLength: 0.097
     - _BaseHue: 1
-    - _Brightness: 2.6
-    - _BrightnessOffs: 3.69
+    - _Brightness: 0.55
+    - _BrightnessOffs: 0.81
     - _ColorAnimLength: 0.5
     - _Duration: 0.5
     - _EdgeThreshold: 0.78

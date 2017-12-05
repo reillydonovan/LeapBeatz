@@ -64,7 +64,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RangeScale: 0.73
+    - _RangeScale: 0.3
     - _Speed: 0.01
     - _SrcBlend: 1
     - _TrianglesScale: 0.15
