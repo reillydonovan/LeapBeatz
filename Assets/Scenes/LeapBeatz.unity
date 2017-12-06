@@ -113,6 +113,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1404367628755344, guid: 2276723046d707c4f94d431ceb80ab92,
     type: 2}
   m_PrefabInternal: {fileID: 1006722880}
+--- !u!1 &40067786 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1836811614331858, guid: 49647b158d164da41bad02830cf356e2,
+    type: 2}
+  m_PrefabInternal: {fileID: 968649713}
 --- !u!4 &63097743 stripped
 Transform:
   m_PrefabParentObject: {fileID: 464466, guid: 39d18871c11b53c4082d8202e3db68a3, type: 2}
@@ -7076,11 +7081,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoConnect: 1
-  mapBundle: {fileID: 0}
+  mapBundle: {fileID: 11400000, guid: 8a9af5fb8ea305b44aa3a8e701695b69, type: 2}
   workInEditor: 0
   remoteHost: 127.0.0.1
   remotePort: 2345
-  useBundle: 0
+  useBundle: 1
 --- !u!114 &1174206224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7107,7 +7112,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185076539
 GameObject:
@@ -7462,8 +7467,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0fded16383cef4ca424be977fd42bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformObject: {fileID: 326773131}
-  Address: /PalmTest
+  transformObject:
+  - {fileID: 326773131}
+  - {fileID: 40067786}
+  Address:
+  - /LeftPalmPositionX
+  - /LeftPalmPositionY
+  - /LeftPalmPositionZ
+  - /LeftPalmRotationX
+  - /LeftPalmRotationY
+  - /LeftPalmRotationZ
+  - /RightPalmPositionX
+  - /RightPalmPositionY
+  - /RightPalmPositionZ
+  - /RightPalmRotationX
+  - /RightPalmRotationY
+  - /RightPalmRotationZ
   Transmitter: {fileID: 1174206223}
 --- !u!4 &1373307228
 Transform:
@@ -7476,7 +7495,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1397610893
 GameObject:
@@ -8223,7 +8242,6 @@ GameObject:
   - component: {fileID: 1748794404}
   - component: {fileID: 1748794403}
   - component: {fileID: 1748794410}
-  - component: {fileID: 1748794411}
   m_Layer: 0
   m_Name: Sphere (10)
   m_TagString: Untagged
@@ -8369,24 +8387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693261af0a22409429f00b40dd16bdc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1748794411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1748794402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da87fb95f42e48b2b05b160c09ff113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   transmitter: {fileID: 1174206223}
-  address: /address
-  reflectionMember:
-    Target: {fileID: 1748794409}
-    MemberName: hasChanged
-  informOnChanged: 1
-  informInterval: 0
+  transmitterAddress: /address
 --- !u!1 &1769205052
 GameObject:
   m_ObjectHideFlags: 0

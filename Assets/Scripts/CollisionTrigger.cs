@@ -1,20 +1,45 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CollisionTrigger : MonoBehaviour {
+using extOSC;
 
-    // Use this for initialization
-    private void OnTriggerEnter(Collider other)
+[RequireComponent(typeof(Collider))]
+public class CollisionTrigger : MonoBehaviour
+{
+    #region Public Vars
+
+    public OSCTransmitter Transmitter
     {
-        Debug.Log("On Trigger Enter");
+        get { return transmitter; }
+        set { transmitter = value; }
     }
-    private void OnTriggerStay(Collider other)
+
+    public string TransmitterAddress
     {
-        Debug.Log("On Trigger Stay");
+        get { return transmitterAddress; }
+        set { transmitterAddress = value; }
     }
-    private void OnTriggerExit(Collider other)
+
+    #endregion
+
+    #region Protected Vars
+
+    [SerializeField]
+    protected OSCTransmitter transmitter;
+
+    [SerializeField]
+    protected string transmitterAddress = "/address";
+
+    #endregion
+
+    #region Unity Methods
+
+    protected void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("On Trigger Exit");
+        var message = new OSCMessage(transmitterAddress);
+        message.AddValue(OSCValue.String("Hello, world!"));
+
+        transmitter.Send(message);
     }
+
+    #endregion
 }
