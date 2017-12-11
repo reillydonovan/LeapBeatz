@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12550569, g: 0.13105926, b: 0.14249355, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1751,8 +1751,8 @@ GameObject:
   - component: {fileID: 218658577}
   - component: {fileID: 218658576}
   - component: {fileID: 218658582}
-  - component: {fileID: 218658583}
   - component: {fileID: 218658584}
+  - component: {fileID: 218658583}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -2309,7 +2309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &305542477
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7843,6 +7843,10 @@ Prefab:
     - target: {fileID: 11459830, guid: f49b78366e0f91740a5ffbfd03fc2fee, type: 2}
       propertyPath: disablePixelLights
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138276, guid: f49b78366e0f91740a5ffbfd03fc2fee, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f49b78366e0f91740a5ffbfd03fc2fee, type: 2}
@@ -18889,7 +18893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1877826907
 Light:
   m_ObjectHideFlags: 0
